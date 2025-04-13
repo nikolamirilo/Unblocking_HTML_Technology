@@ -1,0 +1,7 @@
+requests
+selenium
+webdriver-manager
+beautifulsoup4
+asyncio
+nodriver
+argparse
