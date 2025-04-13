@@ -57,6 +57,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy the application code
 COPY . .
 
+EXPOSE 6024
 # Command to run the scraper with all methods by default
 ENTRYPOINT ["python", "-m", "asyncio", "scraper.py"]
 CMD ["--method", "all"]
