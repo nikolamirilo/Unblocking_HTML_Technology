@@ -19,23 +19,13 @@ A dockerized web scraping application with multiple scraping methods including r
 
 1. Clone this repository
 2. Navigate to the project directory
-3. Build and run the Docker container:
-
-```bash
-docker-compose build
-docker-compose up
-```
+3. Run server
 
 ### Command Line Options
 
-You can pass command line arguments through docker-compose:
-
 ```bash
-# Run with a specific method
-docker-compose run scraper --method requests
-
-# Run with a proxy
-docker-compose run scraper --method all --proxy host:port:username:password
+# Run server
+uvicorn server:app --host 0.0.0.0 --port 6024
 
 # Available methods:
 # - all: Run all methods
