@@ -40,7 +40,7 @@ ENV CHROME_BIN="/usr/bin/google-chrome"
 # Set working directory
 WORKDIR /app
 
-# Copy files
+# Copy the application files into the container
 COPY . /app
 
 # Install Python dependencies
@@ -50,5 +50,5 @@ RUN pip install -r requirements.txt
 # Expose FastAPI port
 EXPOSE 6024
 
-# Default command (update if your script name is different)
+# Default command to run the FastAPI app using uvicorn
 CMD ["uvicorn", "serve:app", "--host", "0.0.0.0", "--port", "6024"]
