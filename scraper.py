@@ -70,8 +70,8 @@ class AdvancedScraper:
         """Save the HTML content to a file"""
         parsed_url = urlparse(self.url)
         folder_name = parsed_url.netloc
-        # Change the base directory to ../results
-        base_dir = os.path.abspath(os.path.join(os.getcwd(), "..", "results"))
+        # Change the base directory to ./results
+        base_dir = os.path.abspath(os.path.join(os.getcwd(), ".", "results"))
         folder_path = os.path.join(base_dir, folder_name)
         os.makedirs(folder_path, exist_ok=True)
         

@@ -25,7 +25,11 @@ A dockerized web scraping application with multiple scraping methods including r
 
 ```bash
 # Run server
-uvicorn server:app --host 0.0.0.0 --port 6024
+uvicorn server:app --reload --host 127.0.0.1 --port 6024
+
+```bash
+# Run dev server
+uvicorn server:app --reload
 
 # Available methods:
 # - all: Run all methods

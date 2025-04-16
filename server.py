@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from scraper import AdvancedScraper  # Make sure this file matches your main scraper file name
+from scraper import AdvancedScraper 
 
 app = FastAPI()
 
@@ -10,7 +10,7 @@ async def root():
 @app.get("/scrape")
 async def scrape(method: str = "all", proxy: str = None):
     scraper = AdvancedScraper(proxy=proxy)
-    results = {}
+    results = {} 
 
     if method in ['all', 'requests']:
         results['requests'] = scraper.scrape_with_requests()

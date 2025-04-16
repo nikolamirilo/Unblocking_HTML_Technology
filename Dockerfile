@@ -38,10 +38,9 @@ RUN wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | gpg --dearm
 ENV CHROME_BIN="/usr/bin/google-chrome"
 
 # Set working directory
-WORKDIR /app
+WORKDIR /
 
-# Copy the application files into the container
-COPY . /app
+COPY . /
 
 # Install Python dependencies
 RUN pip install --upgrade pip
