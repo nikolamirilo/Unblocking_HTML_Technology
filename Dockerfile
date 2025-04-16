@@ -50,4 +50,4 @@ RUN pip install -r requirements.txt
 EXPOSE 6024
 
 # Default command to run the FastAPI app using uvicorn
-CMD ["uvicorn", "server:app", "--host", "127.0.0.1", "--port", "6024"]
+CMD ["uvicorn", "server:app", "--host", "0.0.0.0", "--port", "6024"]
